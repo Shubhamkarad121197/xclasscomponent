@@ -1,41 +1,32 @@
 import React, { Component } from "react";
-
-import './App.css'
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Count: 0
+      count: 0
     };
   }
 
   increment = () => {
-    this.setState({ Count: this.state.count + 1 });
+    this.setState((prevState) => ({ count: prevState.count + 1 }));
   };
 
   decrement = () => {
-    this.setState({ Count: this.state.count - 1 });
-  };
-
-  reset = () => {
-    this.setState({ Count: 0 });
+    this.setState((prevState) => ({ count: prevState.count - 1 }));
   };
 
   render() {
     return (
       <div className="App">
-        <h1>Counter using Class Component</h1>
-        <h2>{this.state.count}</h2>
+        <h1>Counter App</h1>
+        <h2>Count: {this.state.count}</h2>
         <button onClick={this.increment}>Increment</button>
         <button onClick={this.decrement}>Decrement</button>
-        {/* <button onClick={this.reset}>Reset</button> */}
       </div>
     );
   }
 }
 
-
-
 export default App;
-
