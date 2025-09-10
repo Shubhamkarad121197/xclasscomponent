@@ -6,20 +6,20 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0
+      Count: 0
     };
   }
 
   increment = () => {
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ Count: this.state.count + 1 });
   };
 
   decrement = () => {
-    this.setState({ count: this.state.count - 1 });
+    this.setState({ Count: this.state.count - 1 });
   };
 
   reset = () => {
-    this.setState({ count: 0 });
+    this.setState({ Count: 0 });
   };
 
   render() {
